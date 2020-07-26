@@ -2,10 +2,13 @@ import React from 'react';
 import { HashRouter, Route} from "react-router-dom";
 import About from "./routes/About";
 import Home from "./routes/Home";
+import Navigation from "./components/Navigation";
+// import "./App.css";
 
 function App(){
   return <HashRouter>
     {/* Route안에는 props가 2개. (1) 렌더링할 스크린 (2)뭘 할지 정해주는 것 */}
+    <Navigation />
     <Route path="/" exact={true} component={Home}/>
     <Route path="/about" component={About}/> 
   </HashRouter>
